@@ -1,0 +1,5 @@
+// Serengeti CLI script file 
+connect --host 10.0.10.9:8443 
+help
+help cluster create
+exit
