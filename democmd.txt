@@ -1,4 +1,4 @@
 // Serengeti CLI script file 
 connect --host 10.0.10.9:8443 
-cluster create --name demo4 --password
+cluster create --name clustername --password
 exit
