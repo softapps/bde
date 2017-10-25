@@ -1,4 +1,4 @@
 // Serengeti CLI script file 
-connect --host 10.0.10.11:8443 
+connect --host localhost.compute.internal:8443 
 cluster create --name clustername --password
 exit
