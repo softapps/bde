@@ -1,4 +1,4 @@
 // Serengeti CLI script file 
 connect --host localhost.compute.internal:8443 
-cluster create --name clustername --password --distro Cloudera --type Hadoop
+cluster create --name clustername --password --distro Cloudera --type Hadoop --yes
 exit
