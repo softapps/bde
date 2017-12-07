@@ -33,3 +33,10 @@ help
 help cluster create
 exit
 // null 1.1.0.RC2 log closed at 2017-09-22 17:36:09
+// null 1.1.0.RC2 log opened at 2017-12-08 02:54:50
+// [failed] appmanager add --name test --type ClouderaManager --url http://cm-bde-example-24.compute.internal:7180
+// null 1.1.0.RC2 log opened at 2017-12-08 03:01:02
+connect --host localhost.compute.internal:8443
+appmanager add --name test --type ClouderaManager --url http://cm-bde-example-24.compute.internal:7180
+exit
+// null 1.1.0.RC2 log closed at 2017-12-08 03:01:15
