@@ -233,7 +233,7 @@ def clone_vm(
 
     clonespec = vim.vm.CloneSpec()
     clonespec.location = relospec
-	clonespec.customization = customspec
+    clonespec.customization = customspec
     clonespec.powerOn = power_on
 
     print "cloning VM..."
