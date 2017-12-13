@@ -40,3 +40,75 @@ connect --host localhost.compute.internal:8443
 appmanager add --name test --type ClouderaManager --url http://cm-bde-example-24.compute.internal:7180
 exit
 // null 1.1.0.RC2 log closed at 2017-12-08 03:01:15
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 04:42:01
+connect --host localhost.compute.internal:8443
+cluster list 
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 04:43:58
+connect --host localhost.compute.internal:8443
+exit
+// Serengeti CLI 1.1.0.RC2 log closed at 2017-12-11 05:02:24
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 05:04:48
+connect --host localhost.compute.internal:8443
+cluster create --name demo --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template ndoe-temp  --yes
+cluster create --name demo --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp  --yes
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 16:45:02
+connect --host localhost.compute.internal:8443
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 21:25:42
+connect --host localhost.compute.internal:8443 
+cluster list 
+cluster delete --name demo
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 21:43:59
+connect --host localhost.compute.internal:8443 
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster list 
+cluster delete --name bt01
+clear
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster list 
+cluster delete --name bt01
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-11 22:46:30
+connect --host localhost.compute.internal:8443 
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json
+cluster delete --name bt01
+connect --host localhost.compute.internal:8443 
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-12 05:31:23
+connect --host localhost.compute.internal:8443
+cluster delete --name bt01
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster delete --name bt01
+quit
+// Serengeti CLI 1.1.0.RC2 log closed at 2017-12-12 06:28:31
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-12 06:28:37
+connect --host localhost.compute.internal:8443
+cluster create --name bt01 --password --distro Cloudera --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster create --name bt01 --password --specFile clusterspec/basic_node_cluster.json --template node-temp
+cluster delete --name bt01
+quit
+// Serengeti CLI 1.1.0.RC2 log closed at 2017-12-12 06:53:18
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-12 06:53:23
+connect --host localhost.compute.internal:8443
+cluster create --name bt01 --password --specFile clusterspec/basic_node_cluster.json
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 02:59:00
+connect --host localhost.compute.internal:8443
+cluster list
+cluster list --detail 
+cluster list --detail --name bt01
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 09:38:20
+connect --host localhost.compute.internal:8443
+cluster list
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 09:47:39
+connect --host localhost.compute.internal:8443
+cluster list --detail --name bt02
+cluster list --detail --name bt02
+cluster delete --name bt02
+cluster delete --name bt02
+clear
+quit
+// Serengeti CLI 1.1.0.RC2 log closed at 2017-12-13 10:38:25
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 10:38:31
+connect --host localhost.compute.internal:8443
+cluster create --name bt02 --password --specFile clusterspec/basic_node_cluster.json --template node69-template
