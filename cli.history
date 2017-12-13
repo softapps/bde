@@ -112,3 +112,38 @@ quit
 // Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 10:38:31
 connect --host localhost.compute.internal:8443
 cluster create --name bt02 --password --specFile clusterspec/basic_node_cluster.json --template node69-template
+cluster delete --name bt02
+connect --host localhost.compute.internal:8443
+cluster delete --name bt02
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 15:20:51
+connect --host localhost.compute.internal:8443
+cluster list --detail 
+cluster create --name bt02 --password --specFile clusterspec/basic_node_cluster.json --template node-template
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-13 16:15:51
+connect --host localhost.compute.internal:8443
+cluster create --name bt02 --password --specFile clusterspec/basic_node_cluster.json --template node-template
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name bt02
+cluster list 
+cluster delete --name jenkinsbdeexample38
+cluster delete --name jenkinsbdeexample32
+cluster delete --name jenkinsbdeexample33
+cluster list 
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name jenkinsbdeexample36
+cluster list 
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name jenkinsbdeexample37
+cluster delete --name jenkinsbdeexample38
+cluster delete --name jenkinsbdeexample39
+cluster delete --name jenkinsbdeexample40
+cluster list 
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-14 04:22:36
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-14 04:29:11
+cluster delete --name jenkinsbdeexample40
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name jenkinsbdeexample44
