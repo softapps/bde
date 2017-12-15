@@ -1869,24 +1869,24 @@ def main():
     # Step-Through - Setup services in order of service dependencies
     # Zookeeper, hdfs, HBase, Solr, Spark, Yarn,
     # Hive, Sqoop, Sqoop Client, Impala, Oozie, Hue
-    setup_zookeeper()
-    setup_hdfs()
-    setup_hbase()
+    ##setup_zookeeper()
+    ##setup_hdfs()
+    ##setup_hbase()
     # setup_accumulo()
     # setup_solr()
     # setup_ks_indexer()
-    setup_yarn()
+    ##setup_yarn()
     # setup_mapreduce()
     # setup_spark()
-    setup_flume()
-    setup_spark_on_yarn()
-    setup_hive()
+    ##setup_flume()
+    ##setup_spark_on_yarn()
+    ##setup_hive()
     # setup_sentry()
-    setup_sqoop()
-    setup_sqoop_client()
-    setup_impala()
-    setup_oozie()
-    setup_hue()
+    ##setup_sqoop()
+    ##setup_sqoop_client()
+    ##setup_impala()
+    ##setup_oozie()
+    ##setup_hue()
 
     # Note: setup_easy() is alternative to Step-Through above
     # This this provides an example of alternative method of
@@ -1897,6 +1897,21 @@ def main():
     # You can uncomment below after you've setup the CDH services.
     # setup_hdfs_ha()
     # setup_yarn_ha()
+
+    setup_zookeeper()
+    setup_hdfs
+    setup_yarn()
+    setup_mapreduce()
+    setup_hive()
+    setup_impala()
+
+    Example enable Kerberos
+    cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
+                    'security_realm': 'COMPUTE.INTERNAL',
+                    'kdc_user': 'root/admin@COMPUTE.INTERNAL',
+                    'kdc_password': 'KA)@l35567'}
+    enable_kerberos()
+
 
     # Example enable Kerberos
     # cmx.kerberos = {'kdc_host': 'mko.vpc.cloudera.com',
@@ -1912,7 +1927,10 @@ def main():
 
     # Other examples of CM API
     # eg: "STOP" Services or "START"
-    cdh('HBASE', 'IMPALA', 'SPARK', 'SOLR', 'FLUME').stop()
+    ##cdh('HBASE', 'IMPALA', 'SPARK', 'SOLR', 'FLUME').stop()
+
+
+
 
     print "Enjoy!"
 
