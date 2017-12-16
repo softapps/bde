@@ -148,3 +148,8 @@ connect --host localhost.compute.internal:8443
 cluster list 
 cluster delete --name jenkinsbdeexample44
 cluster delete --name jenkinsbdeexample45
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-15 23:52:14
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name bt01
+cluster list 

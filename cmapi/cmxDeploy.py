@@ -1905,7 +1905,7 @@ def main():
     setup_hive()
     setup_impala()
 
-    Example enable Kerberos
+    # Example enable Kerberos
     cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
                     'security_realm': 'COMPUTE.INTERNAL',
                     'kdc_user': 'root/admin@COMPUTE.INTERNAL',
