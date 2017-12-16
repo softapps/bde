@@ -1899,7 +1899,7 @@ def main():
     # setup_yarn_ha()
 
     setup_zookeeper()
-    setup_hdfs
+    setup_hdfs()
     setup_yarn()
     setup_mapreduce()
     setup_hive()
