@@ -11,6 +11,34 @@ mv /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/US_export_policy.jar /usr/jav
 cp /tmp/jce/local_policy.jar /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/local_policy.jar
 cp /tmp/jce/US_export_policy.jar /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/US_export_policy.jar
 
+cat > /etc/krb5.conf <<"EOF"
+[logging]
+ default = FILE:/var/log/krb5libs.log
+ kdc = FILE:/var/log/krb5kdc.log
+ admin_server = FILE:/var/log/kadmind.log
+
+[libdefaults]
+ default_realm = COMPUTE.INTERNAL
+ dns_lookup_realm = false
+ dns_lookup_kdc = false
+ ticket_lifetime = 24h
+ renew_lifetime = 7d
+ forwardable = true
+# rdns = false
+# default_ccache_name = KEYRING:persistent:%{uid}
+
+[realms]
+ COMPUTE.INTERNAL = {
+  kdc = kdcserver.compute.internal
+  admin_server = kdcserver.compute.internal
+ }
+
+[domain_realm]
+ .compute.internal = COMPUTE.INTERNAL
+ compute.internal = COMPUTE.INTERNAL
+
+EOF
+
  
 #mv cmf.keytab /etc/cloudera-scm-server/
 #chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.keytab
