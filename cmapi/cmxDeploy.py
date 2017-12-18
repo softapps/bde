@@ -1908,8 +1908,8 @@ def main():
     # Example enable Kerberos
     cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
                     'security_realm': 'COMPUTE.INTERNAL',
-                    'kdc_user': 'root/admin@COMPUTE.INTERNAL',
-                    'kdc_password': 'KA)@l35567'}
+                    'kdc_user': 'cloudera-scm/admin@COMPUTE.INTERNAL',
+                    'kdc_password': 'cloudera'}
     enable_kerberos()
 
 
