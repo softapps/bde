@@ -7,7 +7,7 @@
       "roles": [
 	"basic"
       ],
-      "instanceNum": 6,
+      "instanceNum": 4,
       "cpuNum": 4,
       "memCapacityMB": 16384,
       "storage": {
