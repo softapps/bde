@@ -4,7 +4,7 @@ echo "Post Installation Task For Kerberos - Cloudera Manager server"
 
 mkdir /tmp/jce
 cd /tmp/jce
-wget wget http://10.0.10.251/repo/java/JCEPolicyJDK7/US_export_policy.jar
+wget http://10.0.10.251/repo/java/JCEPolicyJDK7/US_export_policy.jar
 wget http://10.0.10.251/repo/java/JCEPolicyJDK7/local_policy.jar
 mv /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/local_policy.jar /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/local_policy.jar.orig
 mv /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/US_export_policy.jar /usr/java/jdk1.7.0_67-cloudera/jre/lib/security/US_export_policy.jar.orig
