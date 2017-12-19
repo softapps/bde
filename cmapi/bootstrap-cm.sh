@@ -22,14 +22,14 @@ for DB in "${SCHEMA[@]}"; do
 done
 
 echo "Set KDH keytab & principal"
-cd /tmp
-wget http://10.0.10.251/repo/kdc/cmf.tar.gz
-tar -xvf cmf.tar.gz
-mv /tmp/cmf.keytab /etc/cloudera-scm-server/
-chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.keytab
-chmod 600 /etc/cloudera-scm-server/cmf.keytab
+#cd /tmp
+#wget http://10.0.10.251/repo/kdc/cmf.tar.gz
+#tar -xvf cmf.tar.gz
+#mv /tmp/cmf.keytab /etc/cloudera-scm-server/
+#chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.keytab
+#chmod 600 /etc/cloudera-scm-server/cmf.keytab
 
-echo "cloudera-scm/admin@COMPUTE.INTERNAL" > /etc/cloudera-scm-server/cmf.principal
+echo "tunde/admin@COMPUTE.INTERNAL" > /etc/cloudera-scm-server/cmf.principal
 chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.principal
 chmod 600 /etc/cloudera-scm-server/cmf.principal
 
