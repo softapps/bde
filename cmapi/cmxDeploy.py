@@ -1924,7 +1924,7 @@ def main():
     # Enable Kerberos
     cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
                     'security_realm': 'COMPUTE.INTERNAL',
-                    'kdc_user': None',
+                    'kdc_user': None,
                     'kdc_password': None}
     enable_kerberos()
 
