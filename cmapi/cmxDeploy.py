@@ -1669,8 +1669,8 @@ def parse_options():
                           'host_names': None, 'license_file': None,
                           'parcel': [], 'archive_url': 'http://10.0.10.251/repo/cdh593'}
 
-    cmx_config_options.update({'kerberos': {'kdc_host': 'kdcserver.compute.internal', 'security_realm': 'COMPUTE.INTERNAL',
-                                            'kdc_user': 'cloudera-scm/admin@COMPUTE.INTERNAL', 'kdc_password': 'cloudera'}})
+    cmx_config_options.update({'kerberos': {'kdc_host': None, 'security_realm': None,
+                                            'kdc_user': None, 'kdc_password': None}})
 
     def cmx_args(option, opt_str, value, *args, **kwargs):
         if option.dest == 'host_names':
@@ -1906,11 +1906,11 @@ def main():
     setup_impala()
 
     # Example enable Kerberos
-#    cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
-#                    'security_realm': 'COMPUTE.INTERNAL',
-#                    'kdc_user': 'cloudera-scm/admin@COMPUTE.INTERNAL',
-#                    'kdc_password': 'cloudera'}
-#    enable_kerberos()
+    cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
+                    'security_realm': 'COMPUTE.INTERNAL',
+                    'kdc_user': 'cloudera-scm/admin@COMPUTE.INTERNAL',
+                    'kdc_password': 'cloudera'}
+    enable_kerberos()
 
 
     # Example enable Kerberos
