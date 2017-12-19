@@ -23,7 +23,8 @@ done
 
 echo "Set KDH keytab & principal"
 cd /tmp
-wget http://10.0.10.251/repo/kdc/cmf.keytab
+wget http://10.0.10.251/repo/kdc/cmf.tar.gz
+tar -xvf cmf.tar.gz
 mv /tmp/cmf.keytab /etc/cloudera-scm-server/
 chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.keytab
 chmod 600 /etc/cloudera-scm-server/cmf.keytab
