@@ -192,3 +192,16 @@ cluster delete --name jenkinscdhkdc13
 cluster delete --name jenkinscdhkdc17
 quit
 // Serengeti CLI 1.1.0.RC2 log closed at 2017-12-19 16:57:21
+// Serengeti CLI 1.1.0.RC2 log opened at 2017-12-19 23:01:41
+connect --host localhost.compute.internal:8443
+cluster list 
+cluster delete --name jenkinscdhkdc18
+cluster delete --name jenkinscdhkdc19
+cluster delete --name jenkinscdhkdc20
+cluster delete --name jenkinscdhkdc21
+cluster delete --name jenkinscdhkdc22
+cluster delete --name jenkinscdhkdc23
+cluster delete --name jenkinscdhkdc24
+cluster delete --name jenkinscdhkdc25
+exit
+// Serengeti CLI 1.1.0.RC2 log closed at 2017-12-19 23:11:18

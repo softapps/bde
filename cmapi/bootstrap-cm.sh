@@ -21,7 +21,7 @@ for DB in "${SCHEMA[@]}"; do
     done
 done
 
-echo "Set KDH keytab & principal"
+echo "Copy Kerberos Keytab Files & Setup Principal"
 cd /tmp
 wget http://10.0.10.251/repo/kdc/cmf.tar.gz
 tar -xvf cmf.tar.gz
