@@ -1929,7 +1929,7 @@ def main():
     # eg: "STOP" Services or "START"
     ##cdh('HBASE', 'IMPALA', 'SPARK', 'SOLR', 'FLUME').stop()
 
-
+    enable_kerberos()
 
 
     print "Enjoy!"
