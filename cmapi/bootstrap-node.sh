@@ -12,3 +12,4 @@ sed -i -e "s/server 0.centos.pool.ntp.org iburst/#/g" /etc/ntp.conf
 sed -i -e "s/server 1.centos.pool.ntp.org iburst/#/g" /etc/ntp.conf
 sed -i -e "s/server 2.centos.pool.ntp.org iburst/#/g" /etc/ntp.conf
 sed -i -e "s/server 3.centos.pool.ntp.org iburst/#/g" /etc/ntp.conf
+service ntpd restart
