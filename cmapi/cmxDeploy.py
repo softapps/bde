@@ -1905,14 +1905,6 @@ def main():
     setup_hive()
     setup_impala()
 
-    # Enable Kerberos
-    cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
-                    'security_realm': 'COMPUTE.INTERNAL',
-                    'kdc_user': None,
-                    'kdc_password': None}
-    enable_kerberos()
-
-
     # Example enable Kerberos
     # cmx.kerberos = {'kdc_host': 'mko.vpc.cloudera.com',
     #                 'security_realm': 'HADOOP.EXAMPLE.COM',
@@ -1928,6 +1920,13 @@ def main():
     # Other examples of CM API
     # eg: "STOP" Services or "START"
     ##cdh('HBASE', 'IMPALA', 'SPARK', 'SOLR', 'FLUME').stop()
+
+    # Enable Kerberos
+    cmx.kerberos = {'kdc_host': 'kdcserver.compute.internal',
+                    'security_realm': 'COMPUTE.INTERNAL',
+                    'kdc_user': None,
+                    'kdc_password': None}
+    enable_kerberos()
 
     print "Enjoy!"
 
