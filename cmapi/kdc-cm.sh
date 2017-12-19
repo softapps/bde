@@ -38,6 +38,7 @@ cat > /etc/krb5.conf <<"EOF"
 
 EOF
 
+#wget http://10.0.10.251/repo/kdc/cmf.keytab
 #mv cmf.keytab /etc/cloudera-scm-server/
 #chown cloudera-scm:cloudera-scm /etc/cloudera-scm-server/cmf.keytab
 #chmod 600 /etc/cloudera-scm-server/cmf.keytab
