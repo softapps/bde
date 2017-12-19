@@ -1021,7 +1021,7 @@ def enable_kerberos():
                                  cluster.configure_for_kerberos(datanode_transceiver_port=1004,
                                                                 datanode_web_port=1006))
         check.status_for_command("Stop Cloudera Management Services v11", cm.get_service().stop())
-        # check.status_for_command("Wait for credentials to be generated v11", cm.generate_credentials())
+        check.status_for_command("Wait for credentials to be generated v11", cm.generate_credentials())
         check.status_for_command("Start Cloudera Management Services v11", cm.get_service().start())
     else:
         hdfs = cdh.get_service_type('HDFS')
