@@ -1667,7 +1667,7 @@ def parse_options():
                           'cluster_name': 'Cluster 1', 'cluster_version': 'CDH5',
                           'username': 'admin', 'password': 'admin', 'cm_server': None,
                           'host_names': None, 'license_file': None,
-                          'parcel': [], 'archive_url': 'http://10.0.10.251/repo/cdh593'}
+                          'parcel': [], 'archive_url': 'http://10.0.10.251/repo/cdhversion'}
 
     cmx_config_options.update({'kerberos': {'kdc_host': None, 'security_realm': None,
                                             'kdc_user': None, 'kdc_password': None}})
